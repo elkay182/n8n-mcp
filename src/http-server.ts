@@ -330,7 +330,7 @@ export async function startFixedHTTPServer() {
     }
   });
   
-  const port = parseInt(process.env.PORT || '3000');
+  const port = parseInt(process.env.PORT || '3000', 10);
   const host = process.env.HOST || '0.0.0.0';
   
   expressServer = app.listen(port, host, () => {
