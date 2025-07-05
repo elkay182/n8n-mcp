@@ -518,7 +518,7 @@ CREATE TABLE IF NOT EXISTS extraction_stats (
       // Version
       const versionMatch = sourceCode.match(/version\s*[:=]\s*(\d+)/);
       if (versionMatch) {
-        result.version = parseInt(versionMatch[1]);
+        result.version = parseInt(versionMatch[1], 10);
       }
       
       // Subtitle
